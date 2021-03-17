@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram bot 'Tele bot'
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/art_bot
+ExecStart=/usr/bin/python3 /art_bot/dialogs_start.py
+RestartSec=10
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
